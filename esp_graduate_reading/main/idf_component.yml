@@ -1,0 +1,13 @@
+dependencies:
+  espressif/esp32-camera:
+    version: "*"
+    override_path: "/path/to/local/esp32-camera"
+  freertos:
+    version: "*"
+    override_path: "/path/to/local/freertos"
+  espressif/esp-mqtt:
+    version: "*"
+    override_path: "/path/to/local/esp-mqtt"
+  thingsboard/thingsboard-sdk:
+    version: "*"
+    override_path: "/path/to/local/thingsboard-sdk"
