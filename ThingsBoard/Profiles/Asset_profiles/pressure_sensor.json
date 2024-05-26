@@ -1,0 +1,13 @@
+{
+  "name": "pressure sensor",
+  "description": "Default asset profile",
+  "image": null,
+  "defaultRuleChainId": {
+    "entityType": "RULE_CHAIN",
+    "id": "baaaad50-1433-11ef-b68a-bfe4060367e5"
+  },
+  "defaultDashboardId": null,
+  "defaultQueueName": null,
+  "defaultEdgeRuleChainId": null,
+  "default": false
+}

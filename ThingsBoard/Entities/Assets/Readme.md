@@ -1,0 +1,1 @@
+Надо создать ассеты для pressure_monitore_node и для pressure_sensor

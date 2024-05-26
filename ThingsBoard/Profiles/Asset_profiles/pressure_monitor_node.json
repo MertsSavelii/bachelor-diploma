@@ -1,0 +1,10 @@
+{
+  "name": "pressure monitor node",
+  "description": null,
+  "image": null,
+  "defaultRuleChainId": null,
+  "defaultDashboardId": null,
+  "defaultQueueName": null,
+  "defaultEdgeRuleChainId": null,
+  "default": false
+}

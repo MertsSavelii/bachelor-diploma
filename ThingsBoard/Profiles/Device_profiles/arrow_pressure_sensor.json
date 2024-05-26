@@ -1,0 +1,93 @@
+{
+  "name": "arrow pressure sensor",
+  "description": "",
+  "image": null,
+  "type": "DEFAULT",
+  "transportType": "MQTT",
+  "provisionType": "DISABLED",
+  "defaultRuleChainId": {
+    "entityType": "RULE_CHAIN",
+    "id": "baaaad50-1433-11ef-b68a-bfe4060367e5"
+  },
+  "defaultDashboardId": {
+    "entityType": "DASHBOARD",
+    "id": "00000000-0000-0000-0000-000000000000"
+  },
+  "defaultQueueName": null,
+  "provisionDeviceKey": null,
+  "firmwareId": null,
+  "softwareId": null,
+  "defaultEdgeRuleChainId": null,
+  "default": false,
+  "profileData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "MQTT",
+      "deviceTelemetryTopic": "v1/devices/me/telemetry",
+      "deviceAttributesTopic": "v1/devices/me/attributes",
+      "deviceAttributesSubscribeTopic": "v1/devices/me/attributes",
+      "transportPayloadTypeConfiguration": {
+        "transportPayloadType": "JSON"
+      },
+      "sparkplug": false,
+      "sparkplugAttributesMetricNames": [
+        "Properties/*",
+        "Device Control/*",
+        "Node Control/*"
+      ],
+      "sendAckOnValidationException": false
+    },
+    "provisionConfiguration": {
+      "type": "DISABLED",
+      "provisionDeviceSecret": null
+    },
+    "alarms": [
+      {
+        "id": "673859d4-703e-9e3a-1727-3fa2990e85b4",
+        "alarmType": "low_pressure",
+        "createRules": {
+          "CRITICAL": {
+            "condition": {
+              "condition": [
+                {
+                  "key": {
+                    "type": "ATTRIBUTE",
+                    "key": "pressure"
+                  },
+                  "valueType": "NUMERIC",
+                  "value": null,
+                  "predicate": {
+                    "type": "NUMERIC",
+                    "operation": "LESS",
+                    "value": {
+                      "defaultValue": 0,
+                      "userValue": null,
+                      "dynamicValue": {
+                        "sourceType": "CURRENT_DEVICE",
+                        "sourceAttribute": "min_normal_pressure",
+                        "inherit": false
+                      }
+                    }
+                  }
+                }
+              ],
+              "spec": {
+                "type": "SIMPLE"
+              }
+            },
+            "schedule": null,
+            "alarmDetails": null,
+            "dashboardId": null
+          }
+        },
+        "clearRule": null,
+        "propagate": false,
+        "propagateToOwner": false,
+        "propagateToTenant": false,
+        "propagateRelationTypes": null
+      }
+    ]
+  }
+}
